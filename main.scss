@@ -1,0 +1,412 @@
+@import "./variables";
+
+// CSS reset
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+// Start code
+body {
+  min-height: 100vh;
+  font-weight: 400; //Almost font-size of design is 400,
+  color: $primary-color;
+  line-height: 1;
+  font-family: $primary-font;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.font-heading {
+  font-family: $secondary-font;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// Header
+.header {
+  background-color: $primary-color;
+  border-bottom: 7.8rem solid $secondary-color;
+
+  &-top {
+    padding-top: 3rem;
+    background-color: $primary-color;
+  }
+
+  &-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-contact {
+    color: #fff;
+    font-size: 2.4rem;
+    line-height: (30 / 24);
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+
+    &-link {
+      color: $font-color;
+      opacity: 0.4;
+      font-size: 1.8rem;
+      text-transform: lowercase;
+      text-decoration: none;
+      padding: 3rem 2.5rem;
+
+      &:hover {
+        color: #fff;
+        opacity: 1;
+      }
+    }
+  }
+
+  .line {
+    padding-top: 2.8rem;
+  }
+
+  &-main {
+    display: flex;
+    padding-top: 15.5rem;
+    gap: 3.2rem;
+  }
+
+  &-img-large {
+    align-self: flex-end;
+    transform: translateY(-7.8rem);
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 72.5rem;
+  }
+  &-heading {
+    display: grid;
+    grid-template-columns: 2fr 9fr;
+    column-gap: 2rem;
+    color: $font-color;
+    font-size: 8.2rem;
+    line-height: (81 / 82);
+    letter-spacing: -1.64px;
+  }
+
+  &-info {
+    width: 100%;
+    max-width: 40.7rem;
+    margin-left: 24.1rem;
+    margin-top: 6.8rem;
+  }
+
+  &-text {
+    margin-top: 4.7rem;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 2rem;
+    line-height: (3 / 2);
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  .header-bg {
+    margin-bottom: -7.8rem;
+  }
+}
+
+// About
+.about {
+  background-color: $secondary-color;
+  padding-top: 18rem;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 11rem;
+  }
+
+  &-heading {
+    font-size: 7rem;
+    line-height: (76 / 70);
+    width: 100%;
+    max-width: 38.8rem;
+  }
+
+  &-des {
+    font-size: 2.4rem;
+    line-height: (34 / 24);
+    opacity: 0.7;
+    width: 100%;
+    max-width: 63.8rem;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15rem;
+  }
+
+  &-info {
+    &-line1 {
+      margin: 4rem auto;
+    }
+
+    &-slogan {
+      font-size: 5.2rem;
+      line-height: calc(61 / 52);
+      width: 100%;
+      max-width: 51.3rem;
+    }
+  }
+
+  &-line {
+    margin: 0 auto;
+  }
+}
+
+//Projects
+.project {
+  padding-top: 12rem;
+  background-color: $secondary-color;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 60px;
+  }
+
+  &-heading {
+    font-size: 7rem;
+    line-height: calc(76 / 70);
+  }
+
+  &-all {
+    color: inherit;
+    font-size: 24px;
+    line-height: 30px; /* 125% */
+  }
+
+  &-item {
+    position: relative;
+  }
+
+  &-image img {
+    width: 100%;
+    height: 71.2rem;
+    object-fit: cover;
+  }
+
+  &-info {
+    position: absolute;
+    bottom: 6.5rem;
+    padding-left: 10%;
+  }
+
+  &-name {
+    color: $secondary-color;
+    font-size: 5rem;
+    line-height: calc(62 / 50);
+  }
+
+  &-link {
+    color: $secondary-color;
+    font-size: 2.4rem;
+    line-height: (30/20);
+  }
+}
+
+// Designer
+.designer {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding-top: 16rem;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-heading {
+    font-size: 7rem;
+    line-height: (76 / 70);
+    padding-bottom: 3rem;
+  }
+
+  &-des {
+    font-size: 2.4rem;
+    line-height: (34/27);
+    opacity: 0.7;
+    width: 61.6rem;
+    padding-bottom: 2.5rem;
+  }
+
+  &-all {
+    font-size: 2.4rem;
+    line-height: (30/24);
+    color: inherit;
+    padding-top: 1.5rem;
+    display: block;
+  }
+}
+
+//Article
+.article {
+  padding-top: 18rem;
+  background-color: $secondary-color;
+
+  &-header {
+    text-align: center;
+  }
+
+  &-heading {
+    font-size: 7rem;
+    line-height: (76 /70);
+    padding-bottom: 5rem;
+  }
+
+  &-all {
+    color: inherit;
+    font-size: 2.4rem;
+    line-height: (30/24);
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15.2rem 0 18rem 0;
+  }
+
+  &-caption {
+    padding-top: 3rem;
+    font-size: 3rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid #dcddda;
+  }
+
+  &-footer {
+    padding-top: 2.3rem;
+    display: flex;
+    gap: 33rem;
+  }
+
+  &-view {
+    color: inherit;
+    font-size: 1.8rem;
+  }
+
+  &-date {
+    font-size: 1.6rem;
+    opacity: 0.5;
+  }
+}
+
+// Contact Section
+.contact {
+  background-color: $primary-color;
+  color: $secondary-color;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10rem;
+  }
+
+  &-info {
+    align-self: center;
+  }
+
+  &-caption {
+    font-size: 3rem;
+    padding-bottom: 7rem;
+  }
+
+  &-method {
+    font-size: 3rem;
+  }
+
+  &-detail {
+    display: block;
+    font-size: 6rem;
+    opacity: 0.6;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  &-nav {
+    margin: 0 auto;
+    transform: translateY(-1.3rem);
+  }
+
+  &-instruction {
+    display: block;
+    font-size: 2.4rem;
+    opacity: 0.4;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16.5rem;
+    padding-bottom: 5rem;
+  }
+
+  &-auth {
+    display: block;
+    color: white;
+    font-size: 2.4rem;
+    opacity: 0.4;
+  }
+
+  &-policy {
+    display: block;
+    color: inherit;
+    font-size: 2.4rem;
+    padding-bottom: 5rem;
+    opacity: 0.4;
+  }
+}
